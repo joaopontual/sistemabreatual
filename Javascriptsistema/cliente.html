@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Cliente</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="tabs">
+        <a href="empresa.html">Manual da Empresa</a>
+        <a href="cliente.html">Manual do Cliente</a>
+        <a href="processos.html">Manual de Processos Internos</a>
+    </div>
+
+    <div class="container">
+        <img src="Logo Principal.png" alt="Logo do Meu Site" class="logo">
+        <h1>Manual do Cliente</h1>
+        
+        <!-- Seção de Seleção -->
+        <div id="selecao">
+            <div>
+                <label for="clientes">Escolher Cliente:</label>
+                <select id="clientes" onchange="loadInformacoes()">
+                    <option value="">Selecione um cliente:</option>
+                </select>
+            </div>
+            <div>
+                <label for="informacoes">Escolher Informação a ser Visualizada:</label>
+                <select id="informacoes" onchange="loadDetalhesCliente()" disabled>
+                    <option value="">Selecione uma informação:</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Seção de Detalhes -->
+        <div id="detalhes" style="display: none;">
+            <h2>Detalhes da Informação:</h2>
+            <ul id="detalhes-list"></ul>
+            <button onclick="voltar()">Voltar</button>
+        </div>
+    </div>
+    <script src="js/cliente.js"></script>
+</body>
+</html>
